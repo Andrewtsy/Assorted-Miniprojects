@@ -1,0 +1,1 @@
+Small notebook classifying rainforest sounds. Roughly followed tutorial by https://towardsdatascience.com/recurrent-neural-nets-for-audio-classification-81cb62327990.

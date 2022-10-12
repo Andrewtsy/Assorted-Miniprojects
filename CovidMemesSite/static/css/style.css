@@ -1,0 +1,66 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: #444;
+  background-color: lightblue;
+}
+
+h1 {
+    text-shadow: 5px 5px 10px lightwhite;
+    text-align: center;
+    margin: auto;
+    color: white;
+    padding: 25px;
+    font-size: 50
+}
+
+h2{
+    text-shadow: 5px 5px 10px lightwhite;
+    text-align: center;
+    margin: auto;
+    color: white;
+    padding: 25px;
+    font-size: 20
+}
+
+p {
+    text-shadow: 5px 5px 10px lightwhite;
+    text-align: center;
+    margin: auto;
+    color: white;
+    padding: 25px;
+    font-size: 30
+}
+
+.center {
+  margin: auto;
+  width: 50%;
+  text-align: center;
+  padding: 300px;
+}
+
+.button1 {
+    text-shadow: 5px;
+    margin-top: 5px;
+    font-size: 100px;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    padding: 5px;
+    position: absolute;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+.button2 {
+    text-shadow: 5px;
+    margin-top: 5px;
+    font-size: 25px;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    padding: 5px;
+    position: absolute;
+    left: 50%;
+    bottom: 45%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}

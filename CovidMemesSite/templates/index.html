@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width", initial-scale=1">
+    <title>Remedial Chaotic Meme Theory</title>
+    <link href="{{ url_for('static', filename="css/style.css") }}" rel="stylesheet">
+  </head>
+
+  <body>
+    <h1>Remedial Chaotic Meme Theory</h1>
+	<br/>
+    <h2>(With a side of COVID fatigue relief)</h2>
+	<br/>
+    <p>Cool Cool Cool Cool</p>
+	<br/>
+    <a href=random><input class='button1' type='button' value='Take Me to another random Meme' onclick='Generator()'/></a>
+	<br/>
+	<br/>
+	<br/>
+	<br/>
+    <p>^(Click the above first)</p>
+	<br/>
+    <a href={{ random }} target='_blank'><input class="button2" id='please' type='button' value=Please! onclick="Hider()"/></a>
+
+    <script type='text/javascript'>
+    window.onload = function () {
+      if (localStorage.getItem("hasCodeRunBefore") === null) {
+        Hider();
+        localStorage.setItem("hasCodeRunBefore", true);
+      }
+    }
+     function Generator() {
+        var x = document.getElementById('please');
+        x.style.display = "block";
+      }
+     function Hider() {
+        var x = document.getElementById("please");
+        x.style.display = "none";
+      }
+    </script>
+  </body>
+
+</html>
