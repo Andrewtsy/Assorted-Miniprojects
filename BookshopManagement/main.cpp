@@ -77,7 +77,7 @@ void bookshop::show_book()
       file >> a_name >> no_copy;
     }
 
-    cout << "Enter any char to continue";
+    cout << "Enter any char to continue: ";
     cin >> wait;
     file.close();
   }
@@ -117,14 +117,15 @@ void bookshop::check_book()
                << no_copy;
           cout << endl
                << endl;
-          file >> b_id >> b_name;
-          file >> a_name >> no_copy;
+          count++;
+          break;
         }
-        // system("pause");
-        file.close();
-        if (count == 0)
-          cout << "\n\nBook ID Not Found...";
+        file >> b_id >> b_name;
+        file >> a_name >> no_copy;
       }
+      file.close();
+      if (count == 0)
+        cout << "\n\nBook ID Not Found...";
     }
 }
 
@@ -133,7 +134,8 @@ void bookshop::update_book()
   system("clear");
   fstream file, file1;
   int no_copy, no_co, count = 0;
-  string b_name, b_na, a_name, a_na, b_idd, b_id;
+  string b_name, b_na, a_name;
+  string a_na, b_idd, b_id;
 
   cout << "\n\n\t\t\t\tUpdate Book Record";
   file1.open("book1.txt", ios::app | ios::out);
@@ -144,7 +146,7 @@ void bookshop::update_book()
   else {
     cout << "\n\nBook ID: ";
     cin >> b_id;
-    file >> b_id >> b_name;
+    file >> b_idd >> b_name;
     file >> a_name >> no_copy;
 
     while (!file.eof()) {
@@ -163,15 +165,17 @@ void bookshop::update_book()
               << a_na << " " << no_co
               << "\n\n";
         count++;
+        cout << "Yes Marker\n";
       }
       else
-        file << " " << b_idd
+        file1 << " " << b_idd
              << " " << b_name
              << " " << a_name
              << " " << no_copy
              << "\n\n";
       file >> b_idd >> b_name;
       file >> a_name >> no_copy;
+      cout << "No Marker\n";
     }
     if (count == 0)
       cout << "\n\nBook ID"
